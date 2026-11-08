@@ -1,0 +1,48 @@
+{
+  "protocol_version": "real_order_replay_transformers_v1_1_code_release_20261105",
+  "rounds": 20,
+  "expected_tasks": 312,
+  "expected_pairs": 103,
+  "expected_tied_tasks": 218,
+  "conditions": [
+    "ordered",
+    "shuffled"
+  ],
+  "models": {
+    "qwen": {
+      "source": "Qwen/Qwen3.5-9B",
+      "model_type": "qwen3_5",
+      "model_class": "Qwen3_5ForConditionalGeneration",
+      "template_kwargs": {
+        "enable_thinking": false
+      }
+    },
+    "gemma": {
+      "source": "google/gemma-3-12b-it",
+      "model_type": "gemma3",
+      "model_class": "Gemma3ForConditionalGeneration",
+      "template_kwargs": {}
+    }
+  },
+  "shuffle_seed": 20261030,
+  "schedule_seed": 20261031,
+  "generation_seed": 20260801,
+  "generation": {
+    "do_sample": false,
+    "max_input_tokens": 32768,
+    "max_new_tokens": 256,
+    "use_cache": true
+  },
+  "dtype": "bfloat16",
+  "attention_implementation": "sdpa",
+  "batch_size": 16,
+  "max_padded_batch_tokens": 65536,
+  "service_retries": 2,
+  "batch_timeout_seconds": 600,
+  "model_load_timeout_seconds": 900,
+  "failure_rule": "earliest_exact_minimum",
+  "parser": "single_json_optional_outer_fence_v1_1",
+  "cost_budget_micro": 0,
+  "start_capacity": 2,
+  "utc_bin_seconds": 1800
+}

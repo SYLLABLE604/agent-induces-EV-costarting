@@ -1,0 +1,200 @@
+{
+  "description": "Code provenance only. No private input or output hashes are included. Exported configurations are adapted; scientific algorithms are preserved unless noted in docs/PROTOCOLS.md.",
+  "files": [
+    {
+      "file": "experiments/two_stage/common.py",
+      "source": "06_code_experiments/ev_order_replay_transformers_v1_1/common.py",
+      "source_sha256": "4020c84082551fc5d323215e127708c657a006fb8809d329be4580406fcd09b2"
+    },
+    {
+      "file": "experiments/two_stage/assignment.py",
+      "source": "06_code_experiments/ev_order_replay_transformers_v1_1/assignment.py",
+      "source_sha256": "5ae65983983309610bc06723463bbbedd09e056977ff011a8204495d6bd027f6"
+    },
+    {
+      "file": "experiments/two_stage/protocol.py",
+      "source": "06_code_experiments/ev_order_replay_transformers_v1_1/protocol.py",
+      "source_sha256": "924d5d2615983e464c0d8d38391a7ae712e7bfa7b3da92f2e605a18bf2ded0ed"
+    },
+    {
+      "file": "experiments/two_stage/backend.py",
+      "source": "06_code_experiments/ev_order_replay_transformers_v1_1/backend.py",
+      "source_sha256": "5d2e06c7601e3994fd9637ce6871ad5cc35fd2d7282d30a204365cbd357208b1"
+    },
+    {
+      "file": "experiments/two_stage/run.py",
+      "source": "06_code_experiments/ev_order_replay_transformers_v1_1/run.py",
+      "source_sha256": "69f8c76d095b460b8e884676ba868faa49e6a4f47f5b3fa8f6165c4cdfe64b03"
+    },
+    {
+      "file": "experiments/two_stage/analysis.py",
+      "source": "06_code_experiments/ev_order_replay_transformers_v1_1/analysis.py",
+      "source_sha256": "0489fbe5fc36fbbb8fdb9e1862828ef2c86261ef6a08ff76a5d9a3c4832fe2ad"
+    },
+    {
+      "file": "experiments/two_stage/launch_4gpu.sh",
+      "source": "06_code_experiments/ev_order_replay_transformers_v1_1/launch_4gpu.sh",
+      "source_sha256": "b115a9e6e7ffd8bf868f18499d0d944af5f4d2a20eb47fca00352f6b8b00b30a"
+    },
+    {
+      "file": "experiments/two_stage/preflight_4gpu.sh",
+      "source": "06_code_experiments/ev_order_replay_transformers_v1_1/preflight_4gpu.sh",
+      "source_sha256": "2eaac301b65093e20fd969448f6c2fd6349bf0c0c67eef704c373f8241bd1e54"
+    },
+    {
+      "file": "experiments/two_stage/status_4gpu.sh",
+      "source": "06_code_experiments/ev_order_replay_transformers_v1_1/status_4gpu.sh",
+      "source_sha256": "1eb94fbff67ed7efb7faacc4b61874833607ac61f1cf8a40ca70471cda85d17e"
+    },
+    {
+      "file": "experiments/two_stage/stop_4gpu.sh",
+      "source": "06_code_experiments/ev_order_replay_transformers_v1_1/stop_4gpu.sh",
+      "source_sha256": "206f1926ab239863d3e426ca3e49a318e107ea20f4916f8f77e22c51e3e24deb"
+    },
+    {
+      "file": "experiments/two_stage/requirements.txt",
+      "source": "06_code_experiments/ev_order_replay_transformers_v1_1/requirements.txt",
+      "source_sha256": "e349fe536e35f8159a10a438328373f363e83343b3e4c5f2aed9688e9e1e4aff"
+    },
+    {
+      "file": "experiments/two_stage/config.json",
+      "source": "06_code_experiments/ev_order_replay_transformers_v1_1/config.json",
+      "source_sha256": "34c422d61208a16b7e85a423adedd90055cf238aa5621eeac7fbc9fa66f7c8b1"
+    },
+    {
+      "file": "experiments/two_stage/prompts/one_shot.txt",
+      "source": "06_code_experiments/ev_order_replay_transformers_v1_1/prompts/one_shot.txt",
+      "source_sha256": "2065744e23a37d04b9dc49cf4c49b806cab0bbddd161717e334213927a77f24f"
+    },
+    {
+      "file": "experiments/paired_swap/analyze.py",
+      "source": "06_code_experiments/agent_presentation_control_server/analyze.py",
+      "source_sha256": "2a5e917f38b0c8f8fd9a6a5e4c8117da34aa8094300d9fb428884fa48b4aa8f3"
+    },
+    {
+      "file": "experiments/paired_swap/parallel.py",
+      "source": "06_code_experiments/agent_presentation_control_server/parallel.py",
+      "source_sha256": "90ce8456dc6a0087ce75186ed2d0bb75da9024184250be2376b3e4203f1fcd0f"
+    },
+    {
+      "file": "experiments/paired_swap/hf_backend.py",
+      "source": "06_code_experiments/agent_presentation_control_server/hf_backend.py",
+      "source_sha256": "8d2ba51afdf65361965f1f5f9fe3159f92005108e7103cf40cdd22eb6b33cdb2"
+    },
+    {
+      "file": "experiments/paired_swap/prepare_4gpu.py",
+      "source": "06_code_experiments/agent_presentation_control_server/prepare_4gpu.py",
+      "source_sha256": "a46026db0b31bc5e8f187a21f969b7445c688e7dea8cede7243855bedb074a97"
+    },
+    {
+      "file": "experiments/paired_swap/merge_shards.py",
+      "source": "06_code_experiments/agent_presentation_control_server/merge_shards.py",
+      "source_sha256": "50f3ecfdd30becd9a8496e4a8a3ff06f45207758159e033fe4593782780f88a5"
+    },
+    {
+      "file": "experiments/paired_swap/design.py",
+      "source": "06_code_experiments/agent_presentation_control_server/design.py",
+      "source_sha256": "332f167fbbd08d937fc4cfe9a9c7e92555b265d0333b23ef34525c80999ff847"
+    },
+    {
+      "file": "experiments/paired_swap/optimization.py",
+      "source": "06_code_experiments/agent_presentation_control_server/optimization.py",
+      "source_sha256": "7abe519f903f9d14d1351978c6b0848fe45f990be14d600ac9c13b671d84491d"
+    },
+    {
+      "file": "experiments/paired_swap/protocol.py",
+      "source": "06_code_experiments/agent_presentation_control_server/protocol.py",
+      "source_sha256": "5a474b9ad77056445f373cd77107db89e6c0579fb51b483e1e7b707883cfc78b"
+    },
+    {
+      "file": "experiments/paired_swap/check_environment.py",
+      "source": "06_code_experiments/agent_presentation_control_server/check_environment.py",
+      "source_sha256": "980d520d6dbebc0a5031fc7c4d9c1d9e434a87afc8679e670530b964cf973ad8"
+    },
+    {
+      "file": "experiments/paired_swap/transport.py",
+      "source": "06_code_experiments/agent_presentation_control_server/transport.py",
+      "source_sha256": "c011124298edcb5156985cb32f084e337b38d7ae4ba66eb0c1bfec244f13c49c"
+    },
+    {
+      "file": "experiments/paired_swap/run.py",
+      "source": "06_code_experiments/agent_presentation_control_server/run.py",
+      "source_sha256": "2faffdc51b8d109b14da0574b51861092e2990f0d54fa5790866facae90dac0e"
+    },
+    {
+      "file": "experiments/paired_swap/config.json",
+      "source": "06_code_experiments/agent_presentation_control_server/config.json",
+      "source_sha256": "6c9e5051d487bf7abbe57c3bcee1b14bac7f296701001bbe3a736f8cbb66ac0c"
+    },
+    {
+      "file": "experiments/paired_swap/requirements.txt",
+      "source": "06_code_experiments/agent_presentation_control_server/requirements.txt",
+      "source_sha256": "4a30bb6e95c5aa34fe6ce199094bb6e1f89a8d2d4cd6b69851fdcb6050683704"
+    },
+    {
+      "file": "experiments/paired_swap/requirements-torch-cu124.txt",
+      "source": "06_code_experiments/agent_presentation_control_server/requirements-torch-cu124.txt",
+      "source_sha256": "b2d14826a497a710513327a0222090a8c3a89fd0b301d439955408bb892150b9"
+    },
+    {
+      "file": "experiments/paired_swap/preflight_4gpu.sh",
+      "source": "06_code_experiments/agent_presentation_control_server/preflight_4gpu.sh",
+      "source_sha256": "48b3eccd4064dda8e369ddea693412753174e97942cc67249911756eaa0f81c1"
+    },
+    {
+      "file": "experiments/paired_swap/launch_4gpu.sh",
+      "source": "06_code_experiments/agent_presentation_control_server/launch_4gpu.sh",
+      "source_sha256": "8c4cb80e2b0376dd3f9633fbe26002621c22855404a1f3f0377f5727041fac7f"
+    },
+    {
+      "file": "experiments/paired_swap/stop_workers_4gpu.sh",
+      "source": "06_code_experiments/agent_presentation_control_server/stop_workers_4gpu.sh",
+      "source_sha256": "fa321619bd7a5a4e280d23e6a3e5a599c7e50a001f31a0a0938c45c33dddaea3"
+    },
+    {
+      "file": "experiments/paired_swap/status_4gpu.sh",
+      "source": "06_code_experiments/agent_presentation_control_server/status_4gpu.sh",
+      "source_sha256": "62d0d41ade0efd0c2210a7adb22ded1332855ca53500db60b9c9e75d738556a4"
+    },
+    {
+      "file": "experiments/paired_swap/start_workers_4gpu.sh",
+      "source": "06_code_experiments/agent_presentation_control_server/start_workers_4gpu.sh",
+      "source_sha256": "73b6062ea3f9692dfb26d6e718b9f07de766b2eaf6a2f29bde0a943663c131cf"
+    },
+    {
+      "file": "experiments/paired_swap/supervise_worker.sh",
+      "source": "06_code_experiments/agent_presentation_control_server/supervise_worker.sh",
+      "source_sha256": "8abc4f16bad956d26c9e7cea5c9c70616848506a86b38ea2ba9c678812a871fc"
+    },
+    {
+      "file": "experiments/paired_swap/prompts/one_shot.txt",
+      "source": "06_code_experiments/agent_presentation_control_server/prompts/one_shot.txt",
+      "source_sha256": "7b7cf37594b266f5489160a3ed03f0f79fde79c0a9f3c6c7ebb3c201e4dd47fa"
+    },
+    {
+      "file": "experiments/paired_swap/prompts/sequential.txt",
+      "source": "06_code_experiments/agent_presentation_control_server/prompts/sequential.txt",
+      "source_sha256": "584173689e6d2b1f8faeaf999f0a07b0f21617396ad8d5a9f24a18b637e939bc"
+    },
+    {
+      "file": "data_builder/dingle_replay/__init__.py",
+      "source": "06_code_experiments/dingle_agent_replay/src/dingle_replay/__init__.py",
+      "source_sha256": "e07cea9337cc4917eeb9ff43e717d1b8117df36a016a691445df00521857a234"
+    },
+    {
+      "file": "data_builder/dingle_replay/tasks.py",
+      "source": "06_code_experiments/dingle_agent_replay/src/dingle_replay/tasks.py",
+      "source_sha256": "f8356d6efc19e950f5b5ac6c1adfc8099d082d030728f8a3b274db88b40ab77e"
+    },
+    {
+      "file": "data_builder/dingle_replay/manifest.py",
+      "source": "06_code_experiments/dingle_agent_replay/src/dingle_replay/manifest.py",
+      "source_sha256": "ddf0afa1677a5393f23b95fde65f2b9686906a1881e3dece8d278888ad7eab90"
+    },
+    {
+      "file": "data_builder/config.example.json",
+      "source": "06_code_experiments/dingle_agent_replay/configs/main.json",
+      "source_sha256": "4041bfe325e24aaa5e8e098adbb9fdd4212c7e5bf2bba633ab160130c6a8b273"
+    }
+  ]
+}

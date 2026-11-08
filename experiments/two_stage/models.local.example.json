@@ -1,0 +1,4 @@
+{
+  "qwen": "/path/to/Qwen3.5-9B",
+  "gemma": "/path/to/gemma-3-12b-it"
+}

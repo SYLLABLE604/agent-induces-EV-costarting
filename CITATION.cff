@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite the associated manuscript using its final publication metadata when available."
+type: software
+title: "Agent-Induced EV Charging Co-Starting: Code Release"
+version: "code-only-2026-11-05"
+date-released: 2026-11-05
+authors:
+  - family-names: Song
+    given-names: Yulin
+  - family-names: Sun
+    given-names: Chenxi
+  - family-names: Huang
+    given-names: Jianwei

@@ -1,0 +1,4 @@
+# Replay statistics, paired-swap extraction and flow tests use only Python's standard library.
+# The raw-source task builder additionally requires:
+numpy>=1.26,<3
+pandas>=2.2,<4

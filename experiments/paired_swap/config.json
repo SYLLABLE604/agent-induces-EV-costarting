@@ -1,0 +1,42 @@
+{
+  "protocol_version": "presentation_control_v3_transformers_bf16_code_release_20261105",
+  "calibration_repeats": 5,
+  "test_repeats": 5,
+  "independent_plan_repeats": 20,
+  "capacity_levels": [
+    1,
+    2,
+    3
+  ],
+  "authorization": "all_frozen_exact_minima",
+  "exact_component_limit": 22,
+  "backend": "transformers_local",
+  "timezone": "Europe/Dublin",
+  "models": {
+    "qwen3.5-9b": {
+      "source": "Qwen/Qwen3.5-9B",
+      "model_type": "qwen3_5"
+    },
+    "gemma3-12b-it": {
+      "source": "google/gemma-3-12b-it",
+      "model_type": "gemma3"
+    }
+  },
+  "generation": {
+    "do_sample": false,
+    "seed": 20260801,
+    "max_input_tokens": 32768,
+    "max_new_tokens": 256,
+    "use_cache": true
+  },
+  "chat_template_kwargs": {
+    "enable_thinking": false
+  },
+  "dtype": "bfloat16",
+  "local_files_only": true,
+  "shuffle_seed": 20260913,
+  "shuffle_repeats": 3,
+  "expected_tasks": 312,
+  "expected_tied_tasks": 218,
+  "expected_pairs": 103
+}
