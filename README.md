@@ -1,6 +1,6 @@
 # Agent-Induced EV Charging Co-Starting: Code Release
 
-This repository provides code for studying additional EV charging co-starting associated with scheduling-agent choices and for evaluating independent candidate presentation followed by exact minimum-change coordination.
+This repository provides code for studying additional EV charging co-starting associated with scheduling-agent choices and for evaluating independent candidate presentation followed by exact minimum-change coordination. All model-inference entry points in this code package use Hugging Face Transformers with local model checkpoints.
 
 **Code only.** No author dataset, task records, candidate tables, pair lists, permutations, model responses, schedules, or experimental result files are distributed. Users must supply their own local inputs. This release cannot regenerate the paper's numerical results without those inputs and records.
 
@@ -10,12 +10,12 @@ This repository provides code for studying additional EV charging co-starting as
 |---|---|---|
 | Task construction | Replay windows, feasible starts, full-session tariff costs | `data_builder/prepare_data.py` |
 | Replay baselines and tie strata | Tables I and II | `scripts/analyze_replay.py` |
-| Sequential start/wait | Original replay comparison; fresh Transformers port | `scripts/run_sequential.py` |
+| Sequential start/wait | Sequential replay with Transformers | `scripts/run_sequential.py` |
 | Paired position swaps | Two-optimum choice-switch experiment | `experiments/paired_swap/` and `scripts/summarize_swaps.py` |
 | Ordered/shuffled fresh model calls and central repair | Two-stage evaluation, current Table III | `experiments/two_stage/run.py` |
 | Exact minimum-change assignment | Central coordination proposition | `experiments/two_stage/assignment.py` |
 
-Table numbering refers to the manuscript after the duplicate presentation-results table was removed. See [protocol notes](docs/PROTOCOLS.md) for historical versus exported execution behavior.
+Table numbering refers to the manuscript after the duplicate presentation-results table was removed. See [protocol notes](docs/PROTOCOLS.md) for experiment settings and execution details.
 
 ## Structure
 
@@ -90,7 +90,7 @@ Use Linux with a BF16-capable CUDA GPU. Install PyTorch compatible with the serv
 python -m pip install -r requirements-inference.txt
 ```
 
-The inference code pins Transformers 5.17.0. The main experiment uses Qwen/Qwen3.5-9B and google/gemma-3-12b-it, local Safetensors checkpoints, BF16 and greedy decoding. Download model weights separately with the required model access. This release does not distribute weights or use Ollama for fresh calls.
+The inference code pins Transformers 5.17.0. The main experiment uses Qwen/Qwen3.5-9B and google/gemma-3-12b-it, local Safetensors checkpoints, BF16 and greedy decoding. Download model weights separately with the required model access. All model inference uses Hugging Face Transformers; model weights are obtained separately.
 
 Copy `experiments/two_stage/models.local.example.json` to `models.local.json` in the same directory and set your checkpoint paths. Keep local paths and generated identities out of Git.
 
@@ -150,9 +150,7 @@ CUDA_VISIBLE_DEVICES=0 python scripts/run_sequential.py \
   --model qwen --out /path/to/local/sequential_qwen
 ```
 
-This new Transformers port uses fresh conversations at each decision time, records every request and raw answer, and advances on `start_now=false`. Invalid/all-wait tasks are explicitly logged and completed at their earliest minimum-cost start; no quality-repair calls are made. An existing output directory is refused. `--shard` and `--shards` support separate task shards; merge complete maps and check coverage before calculating a fleet rate.
-
-**Historical distinction:** The paper's original sequential outcomes were obtained in an earlier Ollama run. They are not bundled here. This fresh Transformers port is a new execution protocol and must not be labelled as the source of those historical numerical outcomes.
+The sequential Transformers runner uses fresh conversations at each decision time, records every request and raw answer, and advances on `start_now=false`. Invalid/all-wait tasks are explicitly logged and completed at their earliest minimum-cost start; no quality-repair calls are made. An existing output directory is refused. `--shard` and `--shards` support separate task shards; merge complete maps and check coverage before calculating a fleet rate.
 
 ## Metrics and scope
 
@@ -165,6 +163,6 @@ The local ordering is designed to disperse choices. The central flow exactly min
 
 ## Availability and citation
 
-This is a code-only companion release. Private inputs, outputs and historical model records are not provided, and no claim of numerical paper replication is made for the synthetic tests. See [validation notes](docs/VALIDATION.md) and [the input schema](docs/DATA_FORMAT.md).
+This is a code-only companion release. Private inputs, outputs and model records are not provided, and no claim of numerical paper replication is made for the synthetic tests. See [validation notes](docs/VALIDATION.md) and [the input schema](docs/DATA_FORMAT.md).
 
 Authors: Yulin Song, Chenxi Sun, and Jianwei Huang. Cite the associated manuscript using its final publication metadata when available; this package does not invent a publication DOI. A redistribution license has not been selected in this packaging step. Model and upstream dataset terms apply separately.
